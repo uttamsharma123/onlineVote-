@@ -1,0 +1,31 @@
+
+.big-text
+{
+  font-size: 3.5rem;
+}
+  .logo-img{
+  width:50px;
+
+}
+#foot{
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  .big-text
+  {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .logo-img{
+    width:40px;
+  }
+}
+.addPadding{
+  padding:40px;
+}
+.bottom-margin{
+  margin-bottom:40px;
+}

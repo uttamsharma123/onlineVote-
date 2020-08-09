@@ -1,0 +1,66 @@
+<%- include("partial/header") -%>
+
+<div class="container">
+  <h1 id="title-head">Online Voting System</h1>
+    <div class="row">
+        <div class="col-md-6 col-xs-12">
+           <div class="row">
+
+            
+        <% NewImagesData.forEach(function(data){ %>
+          <div class="col-md-6 col-xs-6 col-sm-6" >
+  
+              <div class="symbol">
+                 
+                  <h1 class="symbol-title"><%=data.title%></h1>
+                  
+                  <img src="<%=data.src%>" alt="" width="60%"> <br>
+                   <p>Total votes: 0</p>
+                   <p ><%=data.des.slice(0,45)%> <a href="/details/<%=data.title%>">know more</a></p>
+  
+              </div>
+  
+          </div>
+          <%}) %>
+
+
+           </div>
+
+        </div>
+
+        <div class="col-md-6 col-xs-12">
+
+
+         
+
+            <div class="login-page">
+
+                <form action="/login" method="POST" autocomplete="off">
+                    <div class="form-group">
+                      
+                      <input type="text" class="form-control"  name="loginAadhar"placeholder=" Enter Addhar Number ">
+                    </div>
+                    <div class="form-group">
+                     
+                      <input type="password" class="form-control" name="loginPass"placeholder="Password">
+                    </div>
+                   
+                    <button type="submit" class="btn btn-primary">Login</button> <br> <br>
+                    <small style="color:black;font-size:1.4rem;">Not Register? </small><a href="/regi" style="color:rebeccapurple"> Register Here!!</a>
+                  </form>
+            </div>
+
+
+
+        </div>
+       
+
+
+
+    </div>
+
+
+</div>
+
+
+<%- include("partial/footer") -%>

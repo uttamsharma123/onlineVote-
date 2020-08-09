@@ -1,0 +1,29 @@
+<%- include("partial/header") -%>
+
+<div class="container">
+    <div class="row">
+
+        <% NewImagesData.forEach(function(data){ %>
+        <div class="col-md-4 col-xs-6 col-sm-6" >
+
+            <div class="symbol">
+               
+                <h1 class="symbol-title"><%=data.title%></h1>
+                
+                <img src="<%=data.src%>" alt="" width="60%"> <br>
+                 <button class="vote btn  " id="btn"> vote </button> <br>
+                 <p ><%=data.des.slice(0,45)%> <a href="/details/<%=data.title%>">know more</a></p>
+
+            </div>
+
+        </div>
+        <%}) %>
+
+      
+
+
+       
+    </div>
+</div>
+
+<%- include("partial/footer") -%>
